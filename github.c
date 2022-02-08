@@ -75,7 +75,7 @@ int main() {
     for (b = 0; b < n - 1; b++) {
         ex = 0;
         for (c = 0; c < n - b - 1; c++) {
-            if (data1[c] > data1[c+1]) {
+            if (data1[c] < data1[c+1]) {
                 tmp = data1[c];
                 data1[c] = data1[c+1];
                 data1[c+1] = tmp;
@@ -85,9 +85,10 @@ int main() {
     for (b = 0; b < n; b++)
         printf("理科:%f\n", data1[b]);
 
-    for (b = 0; b < i; ++b) {
+    for (b = 0; b < i - 1; ++b) {
+        ex = 0;
         for (c = 0; c < i - b - 1; c++) {
-            if (data2[c] > data2[c+1]) {
+            if (data2[c] < data2[c+1]) {
                 tmp = data2[c];
                 data2[c] = data2[c+1];
                 data2[c+1] = tmp;
@@ -98,4 +99,5 @@ int main() {
         printf("英語:%f\n", data2[b]);
 
 
+    
 }         
