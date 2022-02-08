@@ -40,3 +40,26 @@ print("平均点：" + str(eng_ave))
 print("標準偏差：" + str(eng_std_dev))
 print("合計点：" + str(sum))
 print("")
+
+#人ごとの偏差値
+print("それぞれの人の偏差値")
+
+for i in range(20):
+	sci_dev = 10 * (science[i] - sci_ave) / sci_std_dev + 50
+	eng_dev = 10 * (english[i] - eng_ave) / eng_std_dev + 50
+	print("理科：" + str(sci_dev))
+	print("英語：" + str(eng_dev))
+print("")
+
+
+#高い順にソート
+print("点数の高い順に表示")
+print("理科")
+
+science.sort(reverse=True)
+print(science)
+
+print("英語")
+
+english.sort(reverse=True)
+print(english)
